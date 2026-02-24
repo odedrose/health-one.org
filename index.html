@@ -9,26 +9,47 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      text-align: center;
       background: #ffffff;
       color: #0f172a;
+      line-height: 1.6;
     }
+
     .container {
-      max-width: 800px;
-      margin: 100px auto;
-      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      padding: 80px 20px;
+      text-align: center;
     }
+
     h1 {
-      font-size: 42px;
+      font-size: 48px;
       margin-bottom: 10px;
     }
+
     h2 {
-      font-weight: normal;
+      font-size: 28px;
+      margin-top: 60px;
+    }
+
+    p {
       color: #334155;
     }
+
     .section {
       margin-top: 60px;
     }
+
+    .columns {
+      display: flex;
+      gap: 40px;
+      margin-top: 40px;
+      text-align: left;
+    }
+
+    .column {
+      flex: 1;
+    }
+
     .button {
       display: inline-block;
       margin-top: 30px;
@@ -38,36 +59,72 @@
       text-decoration: none;
       border-radius: 6px;
     }
+
     footer {
       margin-top: 80px;
+      padding: 40px 20px;
+      text-align: center;
       font-size: 14px;
       color: #64748b;
+      border-top: 1px solid #e2e8f0;
+    }
+
+    @media (max-width: 768px) {
+      .columns {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
+
 <body>
-  <div class="container">
-    <h1>HealthONE</h1>
-    <h2>The Israel Center for Healthcare Innovation & Collaboration</h2>
 
-    <div class="section">
-      <p>
-        Bridging healthcare systems, innovation, and global markets.
-      </p>
-      <p>
-        A national platform connecting hospitals, industry, academia, regulators, and investors to accelerate pilot-to-scale healthcare innovation.
-      </p>
-    </div>
+<div class="container">
+  <h1>HealthONE</h1>
+  <p><strong>The Israel Center for Healthcare Innovation & Collaboration</strong></p>
 
-    <div class="section">
-      <a href="mailto:info@health-one.org" class="button">
-        Contact Us
-      </a>
-    </div>
-
-    <footer>
-      © 2026 HealthONE | info@health-one.org
-    </footer>
+  <div class="section">
+    <p>
+      Bridging healthcare systems, innovation, and global markets.
+    </p>
+    <p>
+      A national platform connecting hospitals, industry, academia, regulators, and investors to accelerate pilot-to-scale healthcare innovation.
+    </p>
+    <a href="mailto:info@health-one.org" class="button">Contact Us</a>
   </div>
+
+  <h2>What We Do</h2>
+
+  <div class="columns">
+    <div class="column">
+      <h3>Venture & IP Value Creation</h3>
+      <p>Clinical validation, regulatory strategy, business modeling and structured commercialization pathways.</p>
+    </div>
+    <div class="column">
+      <h3>National Pilot-to-Scale Platform</h3>
+      <p>Multi-institution pilots, real-world validation and system-level implementation frameworks.</p>
+    </div>
+    <div class="column">
+      <h3>Global Gateway</h3>
+      <p>Cross-border partnerships, investor access and international health system collaboration.</p>
+    </div>
+  </div>
+
+  <h2>Why Israel</h2>
+  <p>
+    Israel combines digitized HMOs, advanced tertiary hospitals, regulatory agility and a dense healthtech ecosystem. HealthONE institutionalizes this advantage into a coordinated national engine.
+  </p>
+
+  <h2>Membership</h2>
+  <p>
+    A member-driven, non-profit platform serving hospitals, industry, academia, investors and public sector stakeholders.
+  </p>
+
+</div>
+
+<footer>
+  © 2026 HealthONE | info@health-one.org
+</footer>
+
 </body>
 </html>
