@@ -385,4 +385,148 @@
 
           <h1 class="hero-title">Bridging healthcare systems, innovation, and global markets.</h1>
 
-          <p class="hero-s
+          <p class="hero-sub">
+            A member-driven center connecting hospitals, industry, academia, regulators, and investors to accelerate pilot-to-scale healthcare innovation.
+          </p>
+
+          <p class="hero-text">
+            HealthONE turns clinical needs and promising solutions into measurable deployments — in Israel and with international partners.
+          </p>
+
+          <div class="actions" id="contact">
+            <!-- Mailto should work; also we add a JS fallback below -->
+            <a class="btn btn-primary" href="mailto:info@health-one.org?subject=Contact%20HealthONE&body=Hi%20HealthONE%2C%0A%0A">
+              Contact Us
+            </a>
+            <a class="btn btn-secondary" href="#membership">Request Membership Brief</a>
+          </div>
+
+          <div class="email-line">
+            If your device doesn’t open email automatically, write to:
+            <a href="mailto:info@health-one.org">info@health-one.org</a>
+          </div>
+        </div>
+
+        <div>
+          <!-- Smaller logo: controlled by CSS width -->
+          <img src="/logo.jpg" alt="HealthONE Logo" class="logo" />
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- WHAT WE DO -->
+  <section class="section-light" id="what">
+    <div class="container">
+      <h2 class="section-title">What We Do</h2>
+      <p class="section-sub">
+        Three execution engines that shorten the path from clinical need to implemented, scaled impact.
+      </p>
+
+      <div class="pillars">
+        <article class="card">
+          <img class="card-img" src="/pillar-venture.jpg" alt="Venture & IP Value Creation">
+          <div class="card-body">
+            <span class="badge b-blue">Venture & IP</span>
+            <h3>Value Creation</h3>
+            <p>Clinical validation, regulatory strategy, business modeling, and structured commercialization pathways.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="card-img" src="/pillar-pilot.jpg" alt="National Pilot-to-Scale Platform">
+          <div class="card-body">
+            <span class="badge b-green">Pilot-to-Scale</span>
+            <h3>National Platform</h3>
+            <p>Multi-institution pilots, real-world validation, and system-level implementation frameworks.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="card-img" src="/pillar-global.jpg" alt="Global Gateway">
+          <div class="card-body">
+            <span class="badge b-navy">Global</span>
+            <h3>Gateway Program</h3>
+            <p>Cross-border partnerships, investor access, and international health system collaboration.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY ISRAEL -->
+  <section class="section-tint" id="why">
+    <div class="container">
+      <h2 class="section-title">Why Israel</h2>
+      <p class="section-sub">
+        Israel combines digitized healthcare infrastructure, advanced hospitals, regulatory agility, and a dense healthtech ecosystem.
+      </p>
+
+      <div class="split">
+        <div class="why-box">
+          <p style="margin:0; font-size:18px; color:var(--slate);">
+            HealthONE institutionalizes these strengths into a coordinated national engine — designed for measurable outcomes and global collaboration.
+          </p>
+          <ul>
+            <li>Digitized HMOs with longitudinal data</li>
+            <li>Advanced tertiary medical centers</li>
+            <li>Fast pathways through regulatory collaboration</li>
+            <li>High density of healthtech innovation</li>
+          </ul>
+        </div>
+
+        <!-- Wide image slot (bottom-ish) -->
+        <div>
+          <img class="wide-img" src="/bottom-wide.jpg" alt="HealthONE ecosystem">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEMBERSHIP -->
+  <section class="section-light" id="membership">
+    <div class="container">
+      <div class="cta">
+        <h3>A Platform Owned by Its Members</h3>
+        <p>
+          HealthONE is a member-driven, non-profit national platform serving hospitals, industry, academia, investors, and public sector stakeholders.
+        </p>
+
+        <div class="actions" style="justify-content:center;">
+          <a class="btn btn-primary" href="mailto:members@health-one.org?subject=Membership%20Inquiry%20-%20HealthONE&body=Hi%20HealthONE%2C%0A%0AI%27d%20like%20to%20learn%20about%20membership.%0A%0AOrganization%3A%0AName%3A%0ARole%3A%0APhone%3A%0A%0A">
+            Request Membership Brief
+          </a>
+          <a class="btn btn-secondary" href="mailto:partnerships@health-one.org?subject=Partnership%20-%20HealthONE">
+            Partnerships
+          </a>
+        </div>
+
+        <div class="email-line" style="margin-top:14px;">
+          Prefer email? <a href="mailto:members@health-one.org">members@health-one.org</a> •
+          <a href="mailto:partnerships@health-one.org">partnerships@health-one.org</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 HealthONE • <a href="mailto:info@health-one.org">info@health-one.org</a>
+  </footer>
+
+  <!-- Mailto fallback for some mobile browsers -->
+  <script>
+    (function () {
+      const btn = document.querySelector('.btn.btn-primary[href^="mailto:"]');
+      if (!btn) return;
+
+      btn.addEventListener('click', function (e) {
+        // Some browsers block mailto if it’s not a direct navigation; we force it.
+        const href = btn.getAttribute('href');
+        window.location.href = href;
+      });
+    })();
+  </script>
+
+</body>
+</html>
