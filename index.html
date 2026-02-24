@@ -13,17 +13,14 @@
       --muted:#64748b;
       --border:#e2e8f0;
 
-      /* Brand-ish */
       --blue:#0b4bb3;
       --green:#10b981;
 
-      --bgTop:#f8fbff;
+      --bgTop:#f6fbff;
       --bgMint:#f3fff9;
-      --white:#ffffff;
-
-      --shadow: 0 10px 30px rgba(15,23,42,0.08);
-      --radius: 18px;
-      --max: 1040px;
+      --shadow: 0 10px 28px rgba(15,23,42,0.08);
+      --radius: 16px;
+      --max: 1050px;
     }
 
     *{ box-sizing:border-box; }
@@ -32,10 +29,9 @@
       margin:0;
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       color:var(--navy);
-      background:var(--white);
+      background:#fff;
       line-height:1.55;
     }
-
     a{ color:inherit; }
 
     .container{
@@ -44,107 +40,83 @@
       padding: 0 20px;
     }
 
-    /* Top nav */
-    .nav{
+    /* Simple top bar (small) */
+    .topbar{
       position: sticky;
       top: 0;
-      z-index: 50;
-      background: rgba(255,255,255,0.88);
+      z-index: 20;
+      background: rgba(255,255,255,0.92);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--border);
     }
-    .nav-inner{
+    .topbar-inner{
       display:flex;
       align-items:center;
       justify-content:space-between;
       padding: 12px 0;
-      gap: 18px;
-    }
-    .nav-left{
-      display:flex;
-      align-items:center;
-      gap: 12px;
-      min-width: 200px;
-    }
-    .mini-logo{
-      width: 38px;
-      height: 38px;
-      border-radius: 10px;
-      object-fit: cover;
-      border: 1px solid var(--border);
+      gap: 14px;
     }
     .brand{
-      font-weight: 800;
+      display:flex;
+      align-items:center;
+      gap: 10px;
+      text-decoration:none;
+      font-weight: 900;
+    }
+    .brand img{
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      object-fit: cover;
+    }
+    .brand .name{
+      font-size: 16px;
       letter-spacing: 0.2px;
     }
-    .brand span.blue{ color: var(--blue); }
-    .brand span.green{ color: var(--green); }
+    .brand .name .b{ color: var(--blue); }
+    .brand .name .g{ color: var(--green); }
 
-    .nav-links{
+    .links{
       display:flex;
-      gap: 16px;
+      gap: 12px;
       flex-wrap: wrap;
       justify-content:flex-end;
     }
-    .nav-links a{
+    .links a{
       text-decoration:none;
       color: var(--slate);
-      font-weight: 600;
-      font-size: 14px;
+      font-weight: 700;
+      font-size: 13px;
       padding: 8px 10px;
       border-radius: 10px;
     }
-    .nav-links a:hover{
-      background: #f1f5f9;
-      color: var(--navy);
-    }
+    .links a:hover{ background:#f1f5f9; color: var(--navy); }
 
-    /* Hero */
+    /* HERO (compact, centered) */
     .hero{
       background: linear-gradient(180deg, var(--bgTop), #ffffff);
-      padding: 56px 0 34px;
+      padding: 42px 0 26px;
+      text-align:center;
     }
-    .hero-grid{
-      display:grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 32px;
-      align-items:center;
-    }
-
     .logo{
-      width: min(520px, 100%);
+      width: min(720px, 100%);
       height:auto;
       display:block;
-      margin: 0 auto;
+      margin: 0 auto 12px;
     }
-
-    .hero-title{
-      font-size: clamp(34px, 4vw, 54px);
-      line-height: 1.1;
-      margin: 0 0 12px;
-      font-weight: 900;
-      letter-spacing: -0.5px;
-    }
-
-    .hero-sub{
-      font-size: 20px;
-      color: var(--slate);
-      margin: 0 0 18px;
-      font-weight: 600;
-    }
-
     .kicker{
       display:inline-flex;
       align-items:center;
       gap:10px;
-      padding: 9px 14px;
+      padding: 8px 14px;
       border-radius: 999px;
       background: rgba(11,75,179,0.10);
       color: var(--blue);
-      font-weight: 800;
+      font-weight: 900;
       font-size: 13px;
       letter-spacing: 0.2px;
-      margin-bottom: 16px;
+      margin-top: 6px;
     }
     .dot{
       width: 6px;
@@ -154,98 +126,101 @@
       display:inline-block;
     }
 
-    .hero-text{
+    h1{
+      margin: 16px auto 10px;
+      font-size: clamp(26px, 3.2vw, 38px);
+      line-height: 1.18;
+      font-weight: 950;
+      letter-spacing: -0.3px;
+      max-width: 980px;
+    }
+    .lead{
+      margin: 0 auto;
+      max-width: 950px;
       font-size: 18px;
       color: var(--slate);
-      margin: 0 0 22px;
+      font-weight: 600;
     }
 
     .actions{
+      margin-top: 16px;
       display:flex;
       gap: 12px;
+      justify-content:center;
       flex-wrap: wrap;
-      align-items:center;
     }
-
     .btn{
       appearance:none;
       border: 1px solid transparent;
       padding: 12px 18px;
       border-radius: 12px;
-      font-weight: 800;
-      font-size: 16px;
+      font-weight: 900;
+      font-size: 15px;
       cursor:pointer;
       text-decoration:none;
       display:inline-flex;
       align-items:center;
       gap: 10px;
-      box-shadow: 0 8px 20px rgba(15,23,42,0.10);
+      box-shadow: 0 10px 20px rgba(15,23,42,0.10);
     }
-    .btn-primary{
-      background: var(--navy);
-      color: white;
-    }
-    .btn-primary:hover{ opacity: 0.92; }
-
+    .btn-primary{ background: var(--navy); color:#fff; }
+    .btn-primary:hover{ opacity:0.92; }
     .btn-secondary{
-      background: white;
-      border-color: var(--border);
+      background:#fff;
       color: var(--navy);
-      box-shadow: none;
+      border-color: var(--border);
+      box-shadow:none;
     }
     .btn-secondary:hover{ background:#f8fafc; }
 
     .email-line{
-      margin-top: 12px;
+      margin-top: 10px;
       font-size: 14px;
       color: var(--muted);
     }
     .email-line a{
       color: var(--blue);
-      font-weight: 800;
-      text-decoration: none;
+      font-weight: 900;
+      text-decoration:none;
     }
     .email-line a:hover{ text-decoration: underline; }
 
     /* Sections */
-    section{
-      padding: 78px 0;
-    }
-    .section-light{ background: #ffffff; }
-    .section-tint{ background: var(--bgMint); border-top: 1px solid #e7f6ee; border-bottom: 1px solid #e7f6ee; }
-
+    section{ padding: 54px 0; }
     .section-title{
       text-align:center;
-      font-size: 34px;
-      margin: 0 0 14px;
-      font-weight: 900;
-      letter-spacing: -0.3px;
+      font-size: 30px;
+      margin: 0 0 10px;
+      font-weight: 950;
+      letter-spacing: -0.2px;
     }
     .section-sub{
       text-align:center;
-      margin: 0 auto 34px;
-      max-width: 840px;
+      margin: 0 auto 28px;
+      max-width: 900px;
       color: var(--slate);
-      font-size: 18px;
+      font-size: 17px;
     }
 
-    /* Pillar cards */
-    .pillars{
+    /* 3 columns with images */
+    .grid3{
       display:grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 18px;
+      margin-top: 10px;
     }
     .card{
-      background:white;
+      background:#fff;
       border: 1px solid var(--border);
       border-radius: var(--radius);
       overflow:hidden;
       box-shadow: var(--shadow);
+      text-align:left;
       display:flex;
       flex-direction:column;
       min-height: 100%;
     }
-    .card-img{
+    .card img{
       width:100%;
       height: 170px;
       object-fit: cover;
@@ -253,14 +228,14 @@
       border-bottom: 1px solid var(--border);
     }
     .card-body{
-      padding: 18px 18px 20px;
+      padding: 18px;
     }
     .badge{
       display:inline-block;
       padding: 7px 10px;
       border-radius: 999px;
       font-size: 12px;
-      font-weight: 900;
+      font-weight: 950;
       letter-spacing: 0.2px;
     }
     .b-blue{ background: rgba(11,75,179,0.12); color: var(--blue); }
@@ -268,104 +243,80 @@
     .b-navy{ background: rgba(15,23,42,0.10); color: var(--navy); }
 
     .card h3{
-      margin: 10px 0 10px;
-      font-size: 20px;
-      font-weight: 900;
+      margin: 10px 0 8px;
+      font-size: 19px;
+      font-weight: 950;
     }
     .card p{
       margin: 0;
       color: var(--slate);
-      font-size: 16px;
+      font-size: 15.5px;
     }
 
-    /* Why Israel split */
-    .split{
-      display:grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 26px;
-      align-items:center;
-      margin-top: 24px;
-    }
-    .why-box{
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 22px;
-      box-shadow: var(--shadow);
-    }
-    .why-box ul{
-      margin: 14px 0 0 18px;
-      color: var(--slate);
-      font-size: 16px;
+    /* Wide image section */
+    .wide-wrap{
+      background: var(--bgMint);
+      border-top: 1px solid #e7f6ee;
+      border-bottom: 1px solid #e7f6ee;
     }
     .wide-img{
       width:100%;
-      height: 260px;
+      height: 320px;
       object-fit: cover;
       border-radius: var(--radius);
       border: 1px solid var(--border);
       box-shadow: var(--shadow);
-    }
-
-    /* Membership CTA */
-    .cta{
-      background: linear-gradient(135deg, rgba(11,75,179,0.12), rgba(16,185,129,0.12));
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 26px;
-      box-shadow: var(--shadow);
-      text-align:center;
-      max-width: 920px;
+      display:block;
       margin: 0 auto;
     }
-    .cta h3{
-      margin: 0 0 10px;
-      font-size: 26px;
-      font-weight: 900;
+
+    /* Membership / contact */
+    .cta{
+      background: linear-gradient(135deg, rgba(11,75,179,0.10), rgba(16,185,129,0.10));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 24px;
+      max-width: 980px;
+      margin: 0 auto;
+      text-align:center;
     }
     .cta p{
-      margin: 0 auto 18px;
-      max-width: 720px;
+      margin: 0 auto 14px;
+      max-width: 860px;
+      font-size: 17px;
       color: var(--slate);
-      font-size: 18px;
+      font-weight: 600;
     }
 
     footer{
       border-top: 1px solid var(--border);
-      padding: 34px 0;
+      padding: 26px 0;
       color: var(--muted);
       font-size: 14px;
       text-align:center;
     }
 
-    /* Responsive */
-    @media (max-width: 920px){
-      .hero-grid{ grid-template-columns: 1fr; text-align:center; }
-      .actions{ justify-content:center; }
-      .pillars{ grid-template-columns: 1fr; }
-      .split{ grid-template-columns: 1fr; }
+    @media (max-width: 950px){
+      .grid3{ grid-template-columns: 1fr; }
       .wide-img{ height: 220px; }
-      .nav-inner{ flex-wrap: wrap; }
-      .nav-left{ min-width: unset; }
-      .nav-links{ justify-content:center; width: 100%; }
+      .links{ justify-content:center; width: 100%; }
+      .topbar-inner{ flex-wrap: wrap; }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- NAV -->
-  <div class="nav">
+  <!-- TOP BAR (still one page; these are scroll links) -->
+  <div class="topbar">
     <div class="container">
-      <div class="nav-inner">
-        <div class="nav-left">
-          <img src="/logo.jpg" alt="HealthONE" class="mini-logo" />
-          <div class="brand">
-            <span class="blue">Health</span><span class="green">ONE</span>
-          </div>
-        </div>
-
-        <div class="nav-links">
+      <div class="topbar-inner">
+        <a class="brand" href="#top">
+          <img src="/logo.jpg" alt="HealthONE">
+          <div class="name"><span class="b">Health</span><span class="g">ONE</span></div>
+        </a>
+        <div class="links">
           <a href="#what">What we do</a>
           <a href="#why">Why Israel</a>
           <a href="#membership">Membership</a>
@@ -376,135 +327,107 @@
   </div>
 
   <!-- HERO -->
-  <header class="hero">
+  <header class="hero" id="top">
     <div class="container">
-      <div class="hero-grid">
+      <img src="/logo.jpg" alt="HealthONE Logo" class="logo">
 
-        <div>
-          <span class="kicker"><span class="dot"></span> National platform • Global bridge</span>
+      <div class="kicker"><span class="dot"></span> National platform • Global bridge</div>
 
-          <h1 class="hero-title">Bridging healthcare systems, innovation, and global markets.</h1>
+      <h1>Bridging healthcare systems, innovation, and global markets.</h1>
 
-          <p class="hero-sub">
-            A member-driven center connecting hospitals, industry, academia, regulators, and investors to accelerate pilot-to-scale healthcare innovation.
-          </p>
+      <p class="lead">
+        A national platform connecting hospitals, industry, academia, regulators, and investors to accelerate pilot-to-scale healthcare innovation.
+      </p>
 
-          <p class="hero-text">
-            HealthONE turns clinical needs and promising solutions into measurable deployments — in Israel and with international partners.
-          </p>
+      <div class="actions" id="contact">
+        <a class="btn btn-primary"
+           href="mailto:info@health-one.org?subject=Contact%20HealthONE&body=Hi%20HealthONE%2C%0A%0A">
+          Contact Us
+        </a>
+        <a class="btn btn-secondary" href="#membership">Membership</a>
+      </div>
 
-          <div class="actions" id="contact">
-            <!-- Mailto should work; also we add a JS fallback below -->
-            <a class="btn btn-primary" href="mailto:info@health-one.org?subject=Contact%20HealthONE&body=Hi%20HealthONE%2C%0A%0A">
-              Contact Us
-            </a>
-            <a class="btn btn-secondary" href="#membership">Request Membership Brief</a>
-          </div>
-
-          <div class="email-line">
-            If your device doesn’t open email automatically, write to:
-            <a href="mailto:info@health-one.org">info@health-one.org</a>
-          </div>
-        </div>
-
-        <div>
-          <!-- Smaller logo: controlled by CSS width -->
-          <img src="/logo.jpg" alt="HealthONE Logo" class="logo" />
-        </div>
-
+      <div class="email-line">
+        If email doesn’t open automatically, write to:
+        <a href="mailto:info@health-one.org">info@health-one.org</a>
       </div>
     </div>
   </header>
 
   <!-- WHAT WE DO -->
-  <section class="section-light" id="what">
+  <section id="what">
     <div class="container">
       <h2 class="section-title">What We Do</h2>
       <p class="section-sub">
         Three execution engines that shorten the path from clinical need to implemented, scaled impact.
       </p>
 
-      <div class="pillars">
-        <article class="card">
-          <img class="card-img" src="/pillar-venture.jpg" alt="Venture & IP Value Creation">
+      <div class="grid3">
+        <div class="card">
+          <img src="/pillar-venture.jpg" alt="Venture & IP Value Creation">
           <div class="card-body">
             <span class="badge b-blue">Venture & IP</span>
             <h3>Value Creation</h3>
-            <p>Clinical validation, regulatory strategy, business modeling, and structured commercialization pathways.</p>
+            <p>Clinical validation, regulatory strategy, business modeling and structured commercialization pathways.</p>
           </div>
-        </article>
+        </div>
 
-        <article class="card">
-          <img class="card-img" src="/pillar-pilot.jpg" alt="National Pilot-to-Scale Platform">
+        <div class="card">
+          <img src="/pillar-pilot.jpg" alt="National Pilot-to-Scale Platform">
           <div class="card-body">
             <span class="badge b-green">Pilot-to-Scale</span>
             <h3>National Platform</h3>
-            <p>Multi-institution pilots, real-world validation, and system-level implementation frameworks.</p>
+            <p>Multi-institution pilots, real-world validation and system-level implementation frameworks.</p>
           </div>
-        </article>
+        </div>
 
-        <article class="card">
-          <img class="card-img" src="/pillar-global.jpg" alt="Global Gateway">
+        <div class="card">
+          <img src="/pillar-global.jpg" alt="Global Gateway">
           <div class="card-body">
             <span class="badge b-navy">Global</span>
             <h3>Gateway Program</h3>
-            <p>Cross-border partnerships, investor access, and international health system collaboration.</p>
+            <p>Cross-border partnerships, investor access and international health system collaboration.</p>
           </div>
-        </article>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- WHY ISRAEL -->
-  <section class="section-tint" id="why">
+  <section id="why" class="wide-wrap">
     <div class="container">
       <h2 class="section-title">Why Israel</h2>
       <p class="section-sub">
-        Israel combines digitized healthcare infrastructure, advanced hospitals, regulatory agility, and a dense healthtech ecosystem.
+        Israel combines digitized HMOs, advanced tertiary hospitals, regulatory agility and a dense healthtech ecosystem.
+        HealthONE institutionalizes this advantage into a coordinated national engine.
       </p>
 
-      <div class="split">
-        <div class="why-box">
-          <p style="margin:0; font-size:18px; color:var(--slate);">
-            HealthONE institutionalizes these strengths into a coordinated national engine — designed for measurable outcomes and global collaboration.
-          </p>
-          <ul>
-            <li>Digitized HMOs with longitudinal data</li>
-            <li>Advanced tertiary medical centers</li>
-            <li>Fast pathways through regulatory collaboration</li>
-            <li>High density of healthtech innovation</li>
-          </ul>
-        </div>
-
-        <!-- Wide image slot (bottom-ish) -->
-        <div>
-          <img class="wide-img" src="/bottom-wide.jpg" alt="HealthONE ecosystem">
-        </div>
-      </div>
+      <img class="wide-img" src="/bottom-wide.jpg" alt="HealthONE ecosystem">
     </div>
   </section>
 
   <!-- MEMBERSHIP -->
-  <section class="section-light" id="membership">
+  <section id="membership">
     <div class="container">
-      <div class="cta">
-        <h3>A Platform Owned by Its Members</h3>
-        <p>
-          HealthONE is a member-driven, non-profit national platform serving hospitals, industry, academia, investors, and public sector stakeholders.
-        </p>
+      <h2 class="section-title">Membership</h2>
+      <p class="section-sub">
+        A member-driven, non-profit platform serving hospitals, industry, academia, investors and public sector stakeholders.
+      </p>
 
+      <div class="cta">
+        <p>
+          Interested in becoming a founding member, partner, or participating in pilots?
+          Reach us and we’ll share a short membership brief.
+        </p>
         <div class="actions" style="justify-content:center;">
-          <a class="btn btn-primary" href="mailto:members@health-one.org?subject=Membership%20Inquiry%20-%20HealthONE&body=Hi%20HealthONE%2C%0A%0AI%27d%20like%20to%20learn%20about%20membership.%0A%0AOrganization%3A%0AName%3A%0ARole%3A%0APhone%3A%0A%0A">
+          <a class="btn btn-primary"
+             href="mailto:members@health-one.org?subject=Membership%20Inquiry%20-%20HealthONE&body=Organization%3A%0AName%3A%0ARole%3A%0APhone%3A%0A%0A">
             Request Membership Brief
           </a>
-          <a class="btn btn-secondary" href="mailto:partnerships@health-one.org?subject=Partnership%20-%20HealthONE">
+          <a class="btn btn-secondary"
+             href="mailto:partnerships@health-one.org?subject=Partnership%20-%20HealthONE">
             Partnerships
           </a>
-        </div>
-
-        <div class="email-line" style="margin-top:14px;">
-          Prefer email? <a href="mailto:members@health-one.org">members@health-one.org</a> •
-          <a href="mailto:partnerships@health-one.org">partnerships@health-one.org</a>
         </div>
       </div>
     </div>
@@ -514,18 +437,11 @@
     © 2026 HealthONE • <a href="mailto:info@health-one.org">info@health-one.org</a>
   </footer>
 
-  <!-- Mailto fallback for some mobile browsers -->
+  <!-- Mailto “force” fallback (helps some browsers) -->
   <script>
-    (function () {
-      const btn = document.querySelector('.btn.btn-primary[href^="mailto:"]');
-      if (!btn) return;
-
-      btn.addEventListener('click', function (e) {
-        // Some browsers block mailto if it’s not a direct navigation; we force it.
-        const href = btn.getAttribute('href');
-        window.location.href = href;
-      });
-    })();
+    document.querySelectorAll('a[href^="mailto:"]').forEach(a => {
+      a.addEventListener('click', () => { window.location.href = a.getAttribute('href'); });
+    });
   </script>
 
 </body>
