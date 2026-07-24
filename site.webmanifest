@@ -1,0 +1,11 @@
+{
+  "name": "HealthONE - Israel Center for Healthcare Innovation and Collaboration",
+  "short_name": "HealthONE",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0a55b5",
+  "icons": [
+    {"src": "/logo.jpg", "sizes": "any", "type": "image/jpeg", "purpose": "any"}
+  ]
+}
