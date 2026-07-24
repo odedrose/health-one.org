@@ -1,448 +1,130 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>HealthONE</title>
-  <meta name="description" content="HealthONE – Israel Center for Healthcare Innovation and Collaboration" />
-
-  <style>
-    :root{
-      --navy:#0f172a;
-      --slate:#334155;
-      --muted:#64748b;
-      --border:#e2e8f0;
-
-      --blue:#0b4bb3;
-      --green:#10b981;
-
-      --bgTop:#f6fbff;
-      --bgMint:#f3fff9;
-      --shadow: 0 10px 28px rgba(15,23,42,0.08);
-      --radius: 16px;
-      --max: 1050px;
-    }
-
-    *{ box-sizing:border-box; }
-    html{ scroll-behavior:smooth; }
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color:var(--navy);
-      background:#fff;
-      line-height:1.55;
-    }
-    a{ color:inherit; }
-
-    .container{
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    /* Simple top bar (small) */
-    .topbar{
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      background: rgba(255,255,255,0.92);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border);
-    }
-    .topbar-inner{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      padding: 12px 0;
-      gap: 14px;
-    }
-    .brand{
-      display:flex;
-      align-items:center;
-      gap: 10px;
-      text-decoration:none;
-      font-weight: 900;
-    }
-    .brand img{
-      width: 34px;
-      height: 34px;
-      border-radius: 10px;
-      border: 1px solid var(--border);
-      object-fit: cover;
-    }
-    .brand .name{
-      font-size: 16px;
-      letter-spacing: 0.2px;
-    }
-    .brand .name .b{ color: var(--blue); }
-    .brand .name .g{ color: var(--green); }
-
-    .links{
-      display:flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      justify-content:flex-end;
-    }
-    .links a{
-      text-decoration:none;
-      color: var(--slate);
-      font-weight: 700;
-      font-size: 13px;
-      padding: 8px 10px;
-      border-radius: 10px;
-    }
-    .links a:hover{ background:#f1f5f9; color: var(--navy); }
-
-    /* HERO (compact, centered) */
-    .hero{
-      background: linear-gradient(180deg, var(--bgTop), #ffffff);
-      padding: 42px 0 26px;
-      text-align:center;
-    }
-    .logo{
-      width: min(720px, 100%);
-      height:auto;
-      display:block;
-      margin: 0 auto 12px;
-    }
-    .kicker{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: rgba(11,75,179,0.10);
-      color: var(--blue);
-      font-weight: 900;
-      font-size: 13px;
-      letter-spacing: 0.2px;
-      margin-top: 6px;
-    }
-    .dot{
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--green);
-      display:inline-block;
-    }
-
-    h1{
-      margin: 16px auto 10px;
-      font-size: clamp(26px, 3.2vw, 38px);
-      line-height: 1.18;
-      font-weight: 950;
-      letter-spacing: -0.3px;
-      max-width: 980px;
-    }
-    .lead{
-      margin: 0 auto;
-      max-width: 950px;
-      font-size: 18px;
-      color: var(--slate);
-      font-weight: 600;
-    }
-
-    .actions{
-      margin-top: 16px;
-      display:flex;
-      gap: 12px;
-      justify-content:center;
-      flex-wrap: wrap;
-    }
-    .btn{
-      appearance:none;
-      border: 1px solid transparent;
-      padding: 12px 18px;
-      border-radius: 12px;
-      font-weight: 900;
-      font-size: 15px;
-      cursor:pointer;
-      text-decoration:none;
-      display:inline-flex;
-      align-items:center;
-      gap: 10px;
-      box-shadow: 0 10px 20px rgba(15,23,42,0.10);
-    }
-    .btn-primary{ background: var(--navy); color:#fff; }
-    .btn-primary:hover{ opacity:0.92; }
-    .btn-secondary{
-      background:#fff;
-      color: var(--navy);
-      border-color: var(--border);
-      box-shadow:none;
-    }
-    .btn-secondary:hover{ background:#f8fafc; }
-
-    .email-line{
-      margin-top: 10px;
-      font-size: 14px;
-      color: var(--muted);
-    }
-    .email-line a{
-      color: var(--blue);
-      font-weight: 900;
-      text-decoration:none;
-    }
-    .email-line a:hover{ text-decoration: underline; }
-
-    /* Sections */
-    section{ padding: 54px 0; }
-    .section-title{
-      text-align:center;
-      font-size: 30px;
-      margin: 0 0 10px;
-      font-weight: 950;
-      letter-spacing: -0.2px;
-    }
-    .section-sub{
-      text-align:center;
-      margin: 0 auto 28px;
-      max-width: 900px;
-      color: var(--slate);
-      font-size: 17px;
-    }
-
-    /* 3 columns with images */
-    .grid3{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-      margin-top: 10px;
-    }
-    .card{
-      background:#fff;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      overflow:hidden;
-      box-shadow: var(--shadow);
-      text-align:left;
-      display:flex;
-      flex-direction:column;
-      min-height: 100%;
-    }
-    .card img{
-      width:100%;
-      height: 170px;
-      object-fit: cover;
-      display:block;
-      border-bottom: 1px solid var(--border);
-    }
-    .card-body{
-      padding: 18px;
-    }
-    .badge{
-      display:inline-block;
-      padding: 7px 10px;
-      border-radius: 999px;
-      font-size: 12px;
-      font-weight: 950;
-      letter-spacing: 0.2px;
-    }
-    .b-blue{ background: rgba(11,75,179,0.12); color: var(--blue); }
-    .b-green{ background: rgba(16,185,129,0.14); color: var(--green); }
-    .b-navy{ background: rgba(15,23,42,0.10); color: var(--navy); }
-
-    .card h3{
-      margin: 10px 0 8px;
-      font-size: 19px;
-      font-weight: 950;
-    }
-    .card p{
-      margin: 0;
-      color: var(--slate);
-      font-size: 15.5px;
-    }
-
-    /* Wide image section */
-    .wide-wrap{
-      background: var(--bgMint);
-      border-top: 1px solid #e7f6ee;
-      border-bottom: 1px solid #e7f6ee;
-    }
-    .wide-img{
-      width:100%;
-      height: 320px;
-      object-fit: cover;
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-      display:block;
-      margin: 0 auto;
-    }
-
-    /* Membership / contact */
-    .cta{
-      background: linear-gradient(135deg, rgba(11,75,179,0.10), rgba(16,185,129,0.10));
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 24px;
-      max-width: 980px;
-      margin: 0 auto;
-      text-align:center;
-    }
-    .cta p{
-      margin: 0 auto 14px;
-      max-width: 860px;
-      font-size: 17px;
-      color: var(--slate);
-      font-weight: 600;
-    }
-
-    footer{
-      border-top: 1px solid var(--border);
-      padding: 26px 0;
-      color: var(--muted);
-      font-size: 14px;
-      text-align:center;
-    }
-
-    @media (max-width: 950px){
-      .grid3{ grid-template-columns: 1fr; }
-      .wide-img{ height: 220px; }
-      .links{ justify-content:center; width: 100%; }
-      .topbar-inner{ flex-wrap: wrap; }
-    }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HealthONE | Healthcare Innovation and Collaboration in Israel</title>
+  <meta name="description" content="HealthONE is Israel's non-profit platform for healthcare innovation and collaboration, connecting health systems, academia, industry, government and global partners to move solutions from need to implementation and scale.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://health-one.org/">
+  <link rel="icon" type="image/jpeg" href="/logo.jpg">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="HealthONE">
+  <meta property="og:title" content="HealthONE | Healthcare Innovation Through Collaboration">
+  <meta property="og:description" content="A national platform and global bridge advancing practical healthcare innovation, initially focused on the healthcare system in Northern Israel.">
+  <meta property="og:url" content="https://health-one.org/">
+  <meta property="og:image" content="https://health-one.org/logo.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0a55b5">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NonprofitOrganization",
+    "name": "HealthONE - Israel Center for Healthcare Innovation and Collaboration",
+    "alternateName": "HealthONE",
+    "url": "https://health-one.org/",
+    "logo": "https://health-one.org/logo.jpg",
+    "email": "info@health-one.org",
+    "areaServed": ["Israel", "Northern Israel", "International"],
+    "description": "A non-profit platform connecting healthcare organizations, academia, industry, government, investors and global collaborators to advance practical healthcare innovation from clinical need to implementation and scale."
+  }
+  </script>
 </head>
-
 <body>
-
-  <!-- TOP BAR (still one page; these are scroll links) -->
-  <div class="topbar">
-    <div class="container">
-      <div class="topbar-inner">
-        <a class="brand" href="#top">
-          <img src="/logo.jpg" alt="HealthONE">
-          <div class="name"><span class="b">Health</span><span class="g">ONE</span></div>
-        </a>
-        <div class="links">
-          <a href="#what">What we do</a>
-          <a href="#why">Why Israel</a>
-          <a href="#membership">Membership</a>
-          <a href="#contact">Contact</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- HERO -->
-  <header class="hero" id="top">
-    <div class="container">
-      <img src="/logo.jpg" alt="HealthONE Logo" class="logo">
-
-      <div class="kicker"><span class="dot"></span> National platform • Global bridge</div>
-
-      <h1>Bridging healthcare systems, innovation, and global markets.</h1>
-
-      <p class="lead">
-        A national platform connecting hospitals, industry, academia, regulators, and investors to accelerate pilot-to-scale healthcare innovation.
-      </p>
-
-      <div class="actions" id="contact">
-        <a class="btn btn-primary"
-           href="mailto:info@health-one.org?subject=Contact%20HealthONE&body=Hi%20HealthONE%2C%0A%0A">
-          Contact Us
-        </a>
-        <a class="btn btn-secondary" href="#membership">Membership</a>
-      </div>
-
-      <div class="email-line">
-        If email doesn’t open automatically, write to:
-        <a href="mailto:info@health-one.org">info@health-one.org</a>
-      </div>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="HealthONE home"><img src="/logo.jpg" alt="HealthONE - Israel Center for Healthcare Innovation and Collaboration"></a>
+      <button class="menu-button" aria-expanded="false" aria-controls="main-nav">Menu</button>
+      <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+        <a href="#about">About</a><a href="#work">What we do</a><a href="#north">Northern Israel</a><a href="#global">Global bridge</a><a href="#membership">Collaboration</a><a class="nav-cta" href="mailto:info@health-one.org">Contact</a>
+      </nav>
     </div>
   </header>
 
-  <!-- WHAT WE DO -->
-  <section id="what">
-    <div class="container">
-      <h2 class="section-title">What We Do</h2>
-      <p class="section-sub">
-        Three execution engines that shorten the path from clinical need to implemented, scaled impact.
-      </p>
-
-      <div class="grid3">
-        <div class="card">
-          <img src="/pillar-venture.jpg" alt="Venture & IP Value Creation">
-          <div class="card-body">
-            <span class="badge b-blue">Venture & IP</span>
-            <h3>Value Creation</h3>
-            <p>Clinical validation, regulatory strategy, business modeling and structured commercialization pathways.</p>
-          </div>
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Operational platform • Active programs • Global bridge</p>
+          <h1>Turning healthcare collaboration into implemented impact.</h1>
+          <p class="lead">HealthONE is an independent, non-profit platform connecting healthcare organizations, academia, industry, government, investors and international collaborators. We are now operational and advancing practical programs with our partners—from identifying needs and validating solutions to implementation, scale and global collaboration.</p>
+          <div class="actions"><a class="button primary" href="mailto:info@health-one.org?subject=HealthONE%20collaboration">Explore collaboration</a><a class="button secondary" href="#north">Our initial regional focus</a></div>
         </div>
+        <aside class="hero-card" aria-label="HealthONE at a glance">
+          <span class="card-kicker">HealthONE at a glance</span>
+          <strong>One platform. One shared agenda. Multiple routes to impact.</strong>
+          <ul><li>Clinical and operational need identification</li><li>Multi-organization pilots and validation</li><li>Research, data and AI enablement</li><li>Commercialization and global pathways</li></ul>
+        </aside>
+      </div>
+    </section>
 
-        <div class="card">
-          <img src="/pillar-pilot.jpg" alt="National Pilot-to-Scale Platform">
-          <div class="card-body">
-            <span class="badge b-green">Pilot-to-Scale</span>
-            <h3>National Platform</h3>
-            <p>Multi-institution pilots, real-world validation and system-level implementation frameworks.</p>
-          </div>
+    <section id="about" class="section">
+      <div class="container split">
+        <div><p class="eyebrow">Why HealthONE</p><h2>A neutral convening and execution platform</h2></div>
+        <div class="body-copy"><p>Healthcare innovation often stalls between a promising idea and real-world adoption. HealthONE brings the relevant stakeholders into one coordinated process, aligns incentives, defines measurable outcomes and supports execution across organizational boundaries.</p><p>Our role is not to replace existing innovation units. It is to connect them, strengthen their reach and help turn fragmented capabilities into shared national and international value.</p></div>
+      </div>
+    </section>
+
+    <section id="work" class="section muted">
+      <div class="container"><p class="eyebrow">What we do</p><h2>From need to implementation and scale</h2>
+        <div class="cards four">
+          <article><span>01</span><h3>Needs and opportunity mapping</h3><p>Translate clinical, operational and system challenges into clear use cases, priorities and measurable success criteria.</p></article>
+          <article><span>02</span><h3>Pilots and real-world validation</h3><p>Design and coordinate multi-site pilots, stakeholder processes, implementation plans and evidence generation.</p></article>
+          <article><span>03</span><h3>Research, data and AI</h3><p>Enable collaborative research, responsible use of health data and practical AI pathways across institutions.</p></article>
+          <article><span>04</span><h3>Commercial and global pathways</h3><p>Support early regulatory, business, intellectual-property and international-market considerations.</p></article>
         </div>
+      </div>
+    </section>
 
-        <div class="card">
-          <img src="/pillar-global.jpg" alt="Global Gateway">
-          <div class="card-body">
-            <span class="badge b-navy">Global</span>
-            <h3>Gateway Program</h3>
-            <p>Cross-border partnerships, investor access and international health system collaboration.</p>
+    <section id="north" class="section north">
+      <div class="container north-grid">
+        <div><p class="eyebrow">Initial regional focus</p><h2>Strengthening the healthcare ecosystem in Northern Israel</h2><p class="lead-small">HealthONE's first major area of activity is the healthcare system in Northern Israel—a diverse region with strong medical, academic and technological capabilities and significant opportunities to improve access, continuity, resilience and regional collaboration.</p></div>
+        <div class="north-panel">
+          <h3>Our regional ambition</h3>
+          <p>To help build a connected, resilient and internationally engaged healthcare ecosystem in the North over the coming years.</p>
+          <div class="mini-grid">
+            <div><b>Patients</b><span>More equitable access, including care closer to home and stronger continuity between community and hospital care.</span></div>
+            <div><b>Clinical teams</b><span>Opportunities to lead innovation, collaborate across organizations and remain professionally connected to the region.</span></div>
+            <div><b>Researchers</b><span>Multi-institution research, shared capabilities and stronger pathways for advanced data-driven work.</span></div>
+            <div><b>Regional growth</b><span>A stronger environment for health ventures, investment, talent and long-term economic resilience.</span></div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- WHY ISRAEL -->
-  <section id="why" class="wide-wrap">
-    <div class="container">
-      <h2 class="section-title">Why Israel</h2>
-      <p class="section-sub">
-        Israel combines digitized HMOs, advanced tertiary hospitals, regulatory agility and a dense healthtech ecosystem.
-        HealthONE institutionalizes this advantage into a coordinated national engine.
-      </p>
-
-      <img class="wide-img" src="/bottom-wide.jpg" alt="HealthONE ecosystem">
-    </div>
-  </section>
-
-  <!-- MEMBERSHIP -->
-  <section id="membership">
-    <div class="container">
-      <h2 class="section-title">Membership</h2>
-      <p class="section-sub">
-        A member-driven, non-profit platform serving hospitals, industry, academia, investors and public sector stakeholders.
-      </p>
-
-      <div class="cta">
-        <p>
-          Interested in becoming a founding member, partner, or participating in pilots?
-          Reach us and we’ll share a short membership brief.
-        </p>
-        <div class="actions" style="justify-content:center;">
-          <a class="btn btn-primary"
-             href="mailto:info@health-one.org?subject=Membership%20Inquiry%20-%20HealthONE&body=Organization%3A%0AName%3A%0ARole%3A%0APhone%3A%0A%0A">
-            Request Membership Brief
-          </a>
-          <a class="btn btn-secondary"
-             href="mailto:info@health-one.org?subject=Partnership%20-%20HealthONE">
-            Partnerships
-          </a>
+    <section class="section">
+      <div class="container"><p class="eyebrow">How we operate</p><h2>Programs built for measurable execution</h2>
+        <div class="process">
+          <div><i>1</i><h3>Align</h3><p>Clarify the challenge, stakeholders, constraints and desired outcomes.</p></div>
+          <div><i>2</i><h3>Design</h3><p>Build the work plan, governance, measures, resources and implementation route.</p></div>
+          <div><i>3</i><h3>Execute</h3><p>Coordinate partners, pilots, research and professional support.</p></div>
+          <div><i>4</i><h3>Scale</h3><p>Translate learning into broader adoption, commercialization or international collaboration.</p></div>
         </div>
+        <p class="status-note"><strong>HealthONE is operational.</strong> We are currently working with partners on defined programs and applied projects while continuing to expand the network and develop additional areas of collaboration.</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer>
-    © 2026 HealthONE • <a href="mailto:info@health-one.org">info@health-one.org</a>
-  </footer>
+    <section id="global" class="section muted">
+      <div class="container split">
+        <div><p class="eyebrow">Israel to the world—and the world to Israel</p><h2>A two-way global gateway</h2></div>
+        <div class="body-copy"><p>HealthONE develops relationships with international healthcare systems, innovation organizations, investors and professional networks. These connections can support joint programs, access to global markets and investment, and the introduction of relevant international research and innovation into Israel.</p><p>Our goal is practical collaboration: shared challenges, trusted partners, well-designed programs and measurable outcomes.</p></div>
+      </div>
+    </section>
 
-  <!-- Mailto “force” fallback (helps some browsers) -->
-  <script>
-    document.querySelectorAll('a[href^="mailto:"]').forEach(a => {
-      a.addEventListener('click', () => { window.location.href = a.getAttribute('href'); });
-    });
-  </script>
+    <section id="membership" class="section">
+      <div class="container cta-panel">
+        <div><p class="eyebrow">Collaborate with HealthONE</p><h2>Join a growing platform for healthcare impact</h2><p>We work with healthcare organizations, academia, companies, public bodies, investors, innovation organizations and international partners through membership, focused programs, professional support and joint initiatives.</p></div>
+        <div class="cta-actions"><a class="button primary" href="mailto:info@health-one.org?subject=HealthONE%20collaboration">Contact HealthONE</a><a class="text-link" href="mailto:info@health-one.org">info@health-one.org</a></div>
+      </div>
+    </section>
+  </main>
 
+  <footer><div class="container footer-grid"><img src="/logo.jpg" alt="HealthONE"><div><strong>HealthONE</strong><span>Israel Center for Healthcare Innovation and Collaboration</span></div><div><a href="mailto:info@health-one.org">info@health-one.org</a><span>© 2026 HealthONE</span></div></div></footer>
+  <script src="/script.js" defer></script>
 </body>
 </html>
