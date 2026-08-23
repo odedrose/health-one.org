@@ -41,7 +41,7 @@ if(governanceSection){
         </article>
 
         <article class="profile-card board-profile-card">
-          <img src="/Board-Almog.jpeg" alt="Portrait of Almog Aley-Raz" width="600" height="600">
+          <img src="/Board-Almog.jpg" alt="Portrait of Almog Aley-Raz" width="600" height="600">
           <div class="profile-card-body">
             <p class="profile-role">Board Member</p>
             <h3>Almog Aley-Raz</h3>
@@ -101,7 +101,7 @@ if(governanceSection){
 
     <dialog class="profile-dialog" id="almog-board-profile" aria-labelledby="almog-board-name">
       <button class="dialog-close" type="button" aria-label="Close profile">×</button>
-      <div class="dialog-profile-header"><img src="/Board-Almog.jpeg" alt="" width="180" height="180"><div><p class="profile-role">Board Member</p><h2 id="almog-board-name">Almog Aley-Raz</h2></div></div>
+      <div class="dialog-profile-header"><img src="/Board-Almog.jpg" alt="" width="180" height="180"><div><p class="profile-role">Board Member</p><h2 id="almog-board-name">Almog Aley-Raz</h2></div></div>
       <div class="dialog-copy">
         <p>Almog Aley-Raz is a MedTech entrepreneur, executive, and technical leader with extensive experience founding, managing, and scaling innovative health-technology companies. His career spans medical devices, diagnostics, biomaterials, AI-driven decision support, and enterprise-grade technology leadership, with a particular focus on driving products, projects, and organizations to measurable clinical and commercial success. Almog combines deep multidisciplinary expertise with hands-on business leadership, enabling him to build ventures that deliver meaningful impact across healthcare systems in Israel and internationally.</p>
         <p>Almog has founded and led multiple MedTech companies from inception through growth, overseeing venture creation, fundraising, strategic partnerships, product development, regulatory strategy, and operational execution. As Founder &amp; CEO of CorNeat Vision, he guided the development of pioneering ophthalmic implants and advanced biomaterial technologies through clinical trials and global visibility. He later founded GlauCure, a clinical-stage glaucoma device company, and ASTonix, where he currently serves as Founder &amp; CEO, developing rapid phenotypic antibiotic susceptibility testing and AI-powered decision support for infection treatment. Earlier in his career, Almog served as GM &amp; VP at Nuance Communications, where he led the Voice Biometrics and Security business from $2M to $100M in revenue, overseeing global product management and P&amp;L responsibility.</p>
