@@ -61,7 +61,7 @@ if(governanceSection){
         </article>
 
         <article class="profile-card board-profile-card">
-          <img src="/Board-Yair.jpeg" alt="Portrait of Yair Sharon" width="600" height="600">
+          <img src="/Board-Yair.jpg" alt="Portrait of Yair Sharon" width="600" height="600">
           <div class="profile-card-body">
             <p class="profile-role">Board Member</p>
             <h3>Yair Sharon</h3>
@@ -125,7 +125,7 @@ if(governanceSection){
 
     <dialog class="profile-dialog" id="yair-board-profile" aria-labelledby="yair-board-name">
       <button class="dialog-close" type="button" aria-label="Close profile">×</button>
-      <div class="dialog-profile-header"><img src="/Board-Yair.jpeg" alt="" width="180" height="180"><div><p class="profile-role">Board Member</p><h2 id="yair-board-name">Yair Sharon</h2></div></div>
+      <div class="dialog-profile-header"><img src="/Board-Yair.jpg" alt="" width="180" height="180"><div><p class="profile-role">Board Member</p><h2 id="yair-board-name">Yair Sharon</h2></div></div>
       <div class="dialog-copy">
         <p>Yair Sharon is an experienced marketing and business development professional working at the interface between advanced technologies and industrial markets. His professional activity includes Sharon Tuvia, an Israeli precision-manufacturing company with capabilities in advanced machining, additive manufacturing and metal 3D printing.</p>
         <p>His experience includes identifying commercial opportunities, building market relationships and connecting innovative manufacturing technologies with real operational needs. He contributes to HealthONE a practical industrial perspective on technology adoption, commercialization, business development and the role of advanced manufacturing in medical and other high-precision applications.</p>
