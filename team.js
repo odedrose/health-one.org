@@ -65,7 +65,7 @@ if(governanceSection){
           <div class="profile-card-body">
             <p class="profile-role">Board Member</p>
             <h3>Yair Sharon</h3>
-            <p>Marketing and business development professional with experience connecting advanced manufacturing technologies, including additive manufacturing and 3D printing, with industrial markets.</p>
+            <p>Marketing and business development professional with experience connecting advanced manufacturing technologies with industrial and medical markets, with a particular focus on additive manufacturing and its commercial applications.</p>
             <div class="profile-links"><button class="profile-button" type="button" data-dialog="yair-board-profile">Read full profile</button></div>
           </div>
         </article>
@@ -127,10 +127,9 @@ if(governanceSection){
       <button class="dialog-close" type="button" aria-label="Close profile">×</button>
       <div class="dialog-profile-header"><img src="/Board-Yair.jpg" alt="" width="180" height="180"><div><p class="profile-role">Board Member</p><h2 id="yair-board-name">Yair Sharon</h2></div></div>
       <div class="dialog-copy">
-        <p>Yair Sharon is an experienced marketing and business development professional working at the interface between advanced technologies and industrial markets. His professional activity includes Sharon Tuvia, an Israeli precision-manufacturing company with capabilities in advanced machining, additive manufacturing and metal 3D printing.</p>
-        <p>His experience includes identifying commercial opportunities, building market relationships and connecting innovative manufacturing technologies with real operational needs. He contributes to HealthONE a practical industrial perspective on technology adoption, commercialization, business development and the role of advanced manufacturing in medical and other high-precision applications.</p>
-        <h3>Professional focus</h3>
-        <ul><li>Marketing and business development</li><li>Advanced and additive manufacturing</li><li>Technology commercialization and industrial partnerships</li></ul>
+        <p>Yair Sharon is an experienced marketing and business development professional working at the intersection of advanced manufacturing technologies and industrial markets.</p>
+        <p>His professional activity includes Sharon Tuvia (1982) Ltd., an Israeli precision manufacturing company specializing in advanced machining and additive manufacturing of metal components.</p>
+        <p>His experience includes identifying commercial opportunities, developing strategic market relationships, and translating advanced manufacturing capabilities into practical business and industrial applications. He brings to HealthONE a strong industrial and commercial perspective on technology adoption, commercialization, business development, and strategic partnerships, particularly in medical and other high-precision applications.</p>
       </div>
     </dialog>
 
