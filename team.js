@@ -45,7 +45,7 @@ if(governanceSection){
           <div class="profile-card-body">
             <p class="profile-role">Board Member</p>
             <h3>Almog Aley-Raz</h3>
-            <p>Medtech entrepreneur and executive with extensive experience developing, financing and commercializing innovative medical technologies, particularly in ophthalmology.</p>
+            <p>MedTech entrepreneur, executive and technical leader with extensive experience founding and scaling health-technology companies across medical devices, diagnostics, biomaterials and AI-driven decision support.</p>
             <div class="profile-links"><button class="profile-button" type="button" data-dialog="almog-board-profile">Read full profile</button></div>
           </div>
         </article>
@@ -103,10 +103,12 @@ if(governanceSection){
       <button class="dialog-close" type="button" aria-label="Close profile">×</button>
       <div class="dialog-profile-header"><img src="/Board-Almog.jpeg" alt="" width="180" height="180"><div><p class="profile-role">Board Member</p><h2 id="almog-board-name">Almog Aley-Raz</h2></div></div>
       <div class="dialog-copy">
-        <p>Almog Aley-Raz is a medtech entrepreneur and executive with extensive experience in the development, financing and commercialization of innovative medical technologies. He is CEO and VP of R&amp;D of CorNeat Vision, an ophthalmic medical-device company developing technologies for corneal, glaucoma and ocular-surface surgery.</p>
-        <p>His work has included advancing novel ophthalmic solutions from concept and product development through clinical programs, international exposure, investor engagement and commercialization pathways. He brings HealthONE practical experience in entrepreneurship, medtech innovation, product development and the translation of breakthrough technologies toward clinical use.</p>
-        <h3>Professional focus</h3>
-        <ul><li>Medical-device entrepreneurship and management</li><li>Ophthalmic innovation and product development</li><li>Clinical translation, financing and commercialization</li></ul>
+        <p>Almog Aley-Raz is a MedTech entrepreneur, executive, and technical leader with extensive experience founding, managing, and scaling innovative health-technology companies. His career spans medical devices, diagnostics, biomaterials, AI-driven decision support, and enterprise-grade technology leadership, with a particular focus on driving products, projects, and organizations to measurable clinical and commercial success. Almog combines deep multidisciplinary expertise with hands-on business leadership, enabling him to build ventures that deliver meaningful impact across healthcare systems in Israel and internationally.</p>
+        <p>Almog has founded and led multiple MedTech companies from inception through growth, overseeing venture creation, fundraising, strategic partnerships, product development, regulatory strategy, and operational execution. As Founder &amp; CEO of CorNeat Vision, he guided the development of pioneering ophthalmic implants and advanced biomaterial technologies through clinical trials and global visibility. He later founded GlauCure, a clinical-stage glaucoma device company, and ASTonix, where he currently serves as Founder &amp; CEO, developing rapid phenotypic antibiotic susceptibility testing and AI-powered decision support for infection treatment. Earlier in his career, Almog served as GM &amp; VP at Nuance Communications, where he led the Voice Biometrics and Security business from $2M to $100M in revenue, overseeing global product management and P&amp;L responsibility.</p>
+        <p>Across his ventures, Almog has built and led multidisciplinary teams, managed complex development pipelines, and established collaborations across healthcare, industry, academia, and innovation ecosystems. His leadership integrates technical depth with business acumen, enabling him to translate breakthrough technologies into clinically validated, market-ready solutions. He has raised significant capital, driven international business development, and guided organizations through regulatory, clinical, and commercial milestones.</p>
+        <p>As a member of HealthONE's founding team and a board member, Almog brings extensive MedTech innovation experience and an entrepreneurial perspective to support the organization's mission. He contributes strategic insight, venture-building expertise, and hands-on knowledge of technology translation to accelerate healthcare innovation across Israel's health ecosystem and beyond.</p>
+        <h3>Education</h3>
+        <ul><li>B.Sc., Electrical Engineering — Ben-Gurion University of the Negev</li><li>MBA — Tel Aviv University</li><li>Medical Devices – R&amp;D and Regulation Management — Technion – Israel Institute of Technology</li></ul>
       </div>
     </dialog>
 
