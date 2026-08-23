@@ -73,7 +73,7 @@ if(governanceSection){
         <article class="profile-card board-profile-card">
           <img src="/Board-Yaniv.jpg" alt="Portrait of Yaniv Garty" width="600" height="600">
           <div class="profile-card-body">
-            <p class="profile-role">Board Member</p>
+            <p class="profile-role">Board Advisor</p>
             <h3>Yaniv Garty</h3>
             <p>Senior technology executive and board leader with extensive experience in global business, innovation ecosystems and U.S.–Israel economic and technology collaboration.</p>
             <div class="profile-links"><button class="profile-button" type="button" data-dialog="yaniv-board-profile">Read full profile</button></div>
@@ -93,7 +93,7 @@ if(governanceSection){
       <div class="dialog-profile-header"><img src="/Board-Amira.jpg" alt="" width="180" height="180"><div><p class="profile-role">Board Member</p><h2 id="amira-board-name">Dr. Amira Sharon</h2></div></div>
       <div class="dialog-copy">
         <p>Dr. Amira Sharon is an international expert in disruptive and emerging breakthrough technologies and the founder of Loop-Impact. Her work focuses on innovation strategy, technology assessment and helping organizations understand how new technologies can be translated into meaningful business and societal impact.</p>
-        <p>She brings a cross-disciplinary perspective spanning technology, innovation and executive decision-making, with experience engaging leaders and organizations around the strategic implications of rapid technological change. Her background includes executive education at Harvard Business School.</p>
+        <p>She previously served as CTO and Chief Innovation Officer of IAI (Israel Aerospace Industries), bringing senior leadership experience from one of Israel's leading technology and engineering organizations. She brings a cross-disciplinary perspective spanning technology, innovation and executive decision-making, with experience engaging leaders and organizations around the strategic implications of rapid technological change. Her background includes executive education at Harvard Business School.</p>
         <h3>Professional focus</h3>
         <ul><li>Disruptive and emerging technologies</li><li>Innovation and technology strategy</li><li>Executive decision-making and transformation</li></ul>
       </div>
@@ -136,7 +136,7 @@ if(governanceSection){
 
     <dialog class="profile-dialog" id="yaniv-board-profile" aria-labelledby="yaniv-board-name">
       <button class="dialog-close" type="button" aria-label="Close profile">×</button>
-      <div class="dialog-profile-header"><img src="/Board-Yaniv.jpg" alt="" width="180" height="180"><div><p class="profile-role">Board Member</p><h2 id="yaniv-board-name">Yaniv Garty</h2></div></div>
+      <div class="dialog-profile-header"><img src="/Board-Yaniv.jpg" alt="" width="180" height="180"><div><p class="profile-role">Board Advisor</p><h2 id="yaniv-board-name">Yaniv Garty</h2></div></div>
       <div class="dialog-copy">
         <p>Yaniv Garty is a senior technology executive and board leader who served as Intel Vice President and CEO of Intel Israel. He joined Intel following the acquisition of Envara and subsequently held senior positions within Intel's global organization before being appointed to lead Intel Israel.</p>
         <p>From 2018 to 2023, Yaniv served as Chairman of the Israel-America Chamber of Commerce, helping advance U.S.–Israel commercial cooperation and strategic initiatives, including collaboration frameworks in healthcare. He brings HealthONE extensive experience in global technology leadership, innovation ecosystems, corporate strategy, governance and international partnership building.</p>
