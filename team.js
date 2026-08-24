@@ -55,7 +55,7 @@ if(governanceSection){
           <div class="profile-card-body">
             <p class="profile-role">Board Member</p>
             <h3>Tina Meerry</h3>
-            <p>Tina Meerry Melusyan is a senior pharmaceutical and healthcare executive with over 25 years of international leadership experience across specialty care, market access, commercial strategy, public affairs and business management.</p>
+            <p>Tina Meerry is a senior pharmaceutical and healthcare executive with over 25 years of international leadership experience across specialty care, market access, commercial strategy, public affairs and business management.</p>
             <div class="profile-links"><button class="profile-button" type="button" data-dialog="tina-board-profile">Read full profile</button></div>
           </div>
         </article>
