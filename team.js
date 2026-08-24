@@ -55,7 +55,7 @@ if(governanceSection){
           <div class="profile-card-body">
             <p class="profile-role">Board Member</p>
             <h3>Tina Meerry</h3>
-            <p>Senior pharmaceutical executive with more than 25 years of global leadership experience spanning specialty care, market access, marketing, public affairs and strategic management.</p>
+            <p>Tina Meerry Melusyan is a senior pharmaceutical and healthcare executive with over 25 years of international leadership experience across specialty care, market access, commercial strategy, public affairs and business management.</p>
             <div class="profile-links"><button class="profile-button" type="button" data-dialog="tina-board-profile">Read full profile</button></div>
           </div>
         </article>
@@ -116,10 +116,11 @@ if(governanceSection){
       <button class="dialog-close" type="button" aria-label="Close profile">×</button>
       <div class="dialog-profile-header"><img src="/Board-Tina.jpeg" alt="" width="180" height="180"><div><p class="profile-role">Board Member</p><h2 id="tina-board-name">Tina Meerry</h2></div></div>
       <div class="dialog-copy">
-        <p>Tina Meerry is a senior executive leader with more than 25 years of experience in the global pharmaceutical industry. She currently serves as VP and General Manager, Israel at Rafa, where she contributes to the company's growth and efforts to bring innovative therapies to patients.</p>
-        <p>Her career includes senior leadership roles at Sanofi, Novo Nordisk and MSD, with responsibilities spanning specialty care, marketing, market access, public affairs and strategic leadership. She brings HealthONE deep experience in healthcare markets, patient access, pharmaceutical strategy, organizational leadership and the implementation of innovation within complex health systems.</p>
-        <h3>Professional focus</h3>
-        <ul><li>Pharmaceutical and healthcare leadership</li><li>Market access, marketing and public affairs</li><li>Strategic growth and patient access to innovation</li></ul>
+        <p>Tina brings to the HealthONE Board extensive experience leading businesses and organizations within complex, highly regulated healthcare environments, with a strong track record of driving sustainable growth, shaping strategic direction and advancing patient access to innovative therapies.</p>
+        <p>Tina has held senior executive positions including currently as <strong>VP &amp; General Manager Israel at Rafa</strong>, recently as <strong>General Manager &amp; Country Lead at Sanofi</strong>, and previously as <strong>Business Unit Director at Novo Nordisk and MSD</strong>. Across these roles, she has led strategic and commercial initiatives spanning market access, marketing, public affairs, organizational leadership and stakeholder engagement.</p>
+        <p>Her Board contribution is grounded in a deep understanding of the pharmaceutical and healthcare ecosystem, combined with broad experience in strategy, innovation, business transformation and navigating complex stakeholder environments. She brings a pragmatic, patient-focused perspective to strategic decision-making and corporate oversight. Tina holds a Bachelor's in Chemistry degree from Bar-Ilan University.</p>
+        <h3>Board Expertise</h3>
+        <ul><li>Pharmaceutical &amp; Healthcare Strategy</li><li>Strategic Growth &amp; Business Transformation</li><li>Pharmaceutical Market &amp; Patient Access</li><li>Innovation &amp; Commercial Strategy</li><li>Public Affairs &amp; Stakeholder Engagement</li><li>Organizational Leadership &amp; Governance</li></ul>
       </div>
     </dialog>
 
