@@ -35,7 +35,7 @@ if(governanceSection){
           <div class="profile-card-body">
             <p class="profile-role">Board Member</p>
             <h3>Dr. Amira Sharon</h3>
-            <p>International innovation and technology expert focused on disruptive and emerging breakthrough technologies, strategy and translating advanced ideas into practical impact.</p>
+            <p>International innovation and technology expert focused on disruptive and emerging breakthrough technologies, global partnerships, innovation &amp; technology diplomacy, translating advanced ideas into practical impact.</p>
             <div class="profile-links"><button class="profile-button" type="button" data-dialog="amira-board-profile">Read full profile</button></div>
           </div>
         </article>
@@ -93,9 +93,9 @@ if(governanceSection){
       <div class="dialog-profile-header"><img src="/Board-Amira.jpg" alt="" width="180" height="180"><div><p class="profile-role">Board Member</p><h2 id="amira-board-name">Dr. Amira Sharon</h2></div></div>
       <div class="dialog-copy">
         <p>Dr. Amira Sharon is an international expert in disruptive and emerging breakthrough technologies and the founder of Loop-Impact. Her work focuses on innovation strategy, technology assessment and helping organizations understand how new technologies can be translated into meaningful business and societal impact.</p>
-        <p>She previously served as CTO and Chief Innovation Officer of IAI (Israel Aerospace Industries), bringing senior leadership experience from one of Israel's leading technology and engineering organizations. She brings a cross-disciplinary perspective spanning technology, innovation and executive decision-making, with experience engaging leaders and organizations around the strategic implications of rapid technological change. Amira earned a PhD in Engineering from the Technion and an executive education at Harvard Business School.</p>
+        <p>She previously served as CTO and Chief Innovation Officer of IAI (Israel Aerospace Industries), bringing senior leadership experience from one of Israel's leading technology and engineering organizations. She brings a cross-disciplinary perspective spanning technology, innovation and executive decision-making, with experience engaging leaders and organizations around the strategic implications of rapid technological change.</p>
         <h3>Professional focus</h3>
-        <ul><li>Disruptive and emerging technologies</li><li>Innovation and technology strategy</li><li>Executive decision-making and transformation</li></ul>
+        <ul><li>Disruptive and emerging technologies</li><li>Innovation &amp; technology strategy</li><li>Innovation &amp; technology diplomacy</li><li>Executive decision-making, strategy and growth</li><li>Global partnerships and investments</li></ul>
       </div>
     </dialog>
 
