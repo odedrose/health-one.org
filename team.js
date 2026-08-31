@@ -51,7 +51,7 @@ if(governanceSection){
         </article>
 
         <article class="profile-card board-profile-card">
-          <img src="/Board-Tina.jpeg" alt="Portrait of Tina Meerry" width="600" height="600">
+          <img src="/Board-Tina.jpg" alt="Portrait of Tina Meerry" width="600" height="600">
           <div class="profile-card-body">
             <p class="profile-role">Board Member</p>
             <h3>Tina Meerry</h3>
@@ -114,7 +114,7 @@ if(governanceSection){
 
     <dialog class="profile-dialog" id="tina-board-profile" aria-labelledby="tina-board-name">
       <button class="dialog-close" type="button" aria-label="Close profile">×</button>
-      <div class="dialog-profile-header"><img src="/Board-Tina.jpeg" alt="" width="180" height="180"><div><p class="profile-role">Board Member</p><h2 id="tina-board-name">Tina Meerry</h2></div></div>
+      <div class="dialog-profile-header"><img src="/Board-Tina.jpg" alt="" width="180" height="180"><div><p class="profile-role">Board Member</p><h2 id="tina-board-name">Tina Meerry</h2></div></div>
       <div class="dialog-copy">
         <p>Tina brings to the HealthONE Board extensive experience leading businesses and organizations within complex, highly regulated healthcare environments, with a strong track record of driving sustainable growth, shaping strategic direction and advancing patient access to innovative therapies.</p>
         <p>Tina has held senior executive positions including currently as <strong>VP &amp; General Manager Israel at Rafa</strong>, recently as <strong>General Manager &amp; Country Lead at Sanofi</strong>, and previously as <strong>Business Unit Director at Novo Nordisk and MSD</strong>. Across these roles, she has led strategic and commercial initiatives spanning market access, marketing, public affairs, organizational leadership and stakeholder engagement.</p>
