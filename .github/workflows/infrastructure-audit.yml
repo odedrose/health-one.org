@@ -2,12 +2,12 @@ name: HealthONE independent infrastructure audit
 on:
   workflow_dispatch:
   schedule:
-    # Three morning opportunities before the 08:00 Israel-time status report.
-    - cron: '15 5 * * *'
+    # Early triggers allow for GitHub Actions scheduling delays before the 08:00 report.
+    - cron: '0 1 * * *'
       timezone: "Asia/Jerusalem"
-    - cron: '15 6 * * *'
+    - cron: '0 3 * * *'
       timezone: "Asia/Jerusalem"
-    - cron: '15 7 * * *'
+    - cron: '0 5 * * *'
       timezone: "Asia/Jerusalem"
 permissions:
   contents: read
